@@ -21,3 +21,9 @@ if (( $+commands[fortune] )); then
     print
   fi
 fi
+
+[[ -s $HOME/.nvm/nvm.sh ]] && source "$HOME/.nvm/nvm.sh"
+[[ -s $HOME/.rvm/scripts/rvm ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s $HOME/.venvburrito/startup.sh ]] && source $HOME/.venvburrito/startup.sh
+
+eval "$(jenv init -)"

@@ -10,4 +10,64 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# Aliases.
+
+alias ls="ls --color=auto"
+alias ll="ls -lah"
+
+alias grep="grep --color=auto"
+
+alias feh="feh --scale-down"
+alias log_cr="jira -w AFCHELSINK-306"
+alias log_meeting="jira -w AFCHELSINK-5597"
+
+alias printer-on="sudo systemctl start cups"
+alias printer-off="sudo systemctl stop cups"
+
+alias alsa-save="sudo alsactl -f /var/lib/alsa/asound.state store"
+alias cats='highlight -O ansi'
+
+alias mouse-on="ltunify pair"
+alias mouse-off="ltunify unpair mouse"
+
+alias vagrant="/usr/bin/vagrant"
+alias bvagrant="bundle exec vagrant"
+
+alias mirror="mplayer -vf mirror -v tv:// -tv device=/dev/video0:driver=v4l2"
+
+alias vim="e"
+
+record() {
+    [[ "$#" != "1" ]] && echo "Pass a channel index" && return
+    FILE=${2:-'outfile.mp3'}
+    parec --monitor-stream $1 --format s16le --channels 2 --rate 44100 | lame -r -s 44.1 -b 16 --signed --little-endian --preset medium /dev/stdin $FILE
+}
+
+gh-repo-create() {
+    [[ "$#" != "1" ]] && echo "Pass a repository name" && return
+    token=`git config github.token`
+    curl -u "$token:x-oauth-basic" https://api.github.com/user/repos -d "{ \"name\": \"$1\" }"
+}
+
+initialize-repository() {
+    [[ "$#" != "1" ]] && echo "Pass a repository name" && return
+
+    mkdir $1
+    pushd $1
+      touch README.md
+      cp "../License - MIT.md" .
+      git init
+      git add . -v
+      git commit -m "Initial commit (only README and LICENSE)."
+      git remote add origin git@github.com:afronski/$1.git
+      git push -u origin master
+    popd
+}
+
+alias chrome-v8-perf="google-chrome-unstable --no-sandbox --js-flags='--trace-hydrogen           \
+                                                                      --trace-phase=Z            \
+                                                                      --trace-deopt              \
+                                                                      --code-comments            \
+                                                                      --hydrogen-track-positions \
+                                                                      --redirect-code-traces'"
+
