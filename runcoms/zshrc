@@ -16,7 +16,7 @@ export PATH="/home/afronski/.rvm/gems/ruby-1.9.3-p484/bin:/home/afronski/.rvm/ge
 
 export GRADLE_HOME="/opt/gradle/gradle-2.0"
 
-export EDITOR="/usr/bin/atom"
+export EDITOR="/home/afronski/.user-scripts/e"
 export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
