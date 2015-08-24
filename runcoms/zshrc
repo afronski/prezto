@@ -49,7 +49,7 @@ alias bvagrant="bundle exec vagrant"
 alias mirror="mplayer -vf mirror -v tv:// -tv device=/dev/video0:driver=v4l2"
 
 alias ghci="ghci-color"
-alias vim="$EDITOR"
+alias vim="e"
 
 record() {
     [[ "$#" != "1" ]] && echo "Pass a channel index" && return
