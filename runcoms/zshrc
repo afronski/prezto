@@ -16,7 +16,7 @@ export PATH="/home/afronski/.rvm/gems/ruby-1.9.3-p484/bin:/home/afronski/.rvm/ge
 
 export GRADLE_HOME="/opt/gradle/gradle-2.0"
 
-export EDITOR="/home/afronski/.user-scripts/e"
+export EDITOR="/usr/bin/atom"
 export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
@@ -33,8 +33,6 @@ alias ll="ls -lah"
 alias grep="grep --color=auto"
 
 alias feh="feh --scale-down"
-alias log_cr="jira -w AFCHELSINK-306"
-alias log_meeting="jira -w AFCHELSINK-5597"
 
 alias printer-on="sudo systemctl start org.cups.cupsd.service"
 alias printer-off="sudo systemctl stop org.cups.cupsd.service"
@@ -51,7 +49,7 @@ alias bvagrant="bundle exec vagrant"
 alias mirror="mplayer -vf mirror -v tv:// -tv device=/dev/video0:driver=v4l2"
 
 alias ghci="ghci-color"
-alias vim="e"
+alias vim="$EDITOR"
 
 record() {
     [[ "$#" != "1" ]] && echo "Pass a channel index" && return
