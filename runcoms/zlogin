@@ -20,5 +20,7 @@
 [[ -s $HOME/.kre/kvm/kvm.sh ]] && . "$HOME/.kre/kvm/kvm.sh"
 
 . .kerl/erlangs/18.1/activate >/dev/null 2>&1
-. .kiex/elixirs/elixir-1.0.5.env >/dev/null 2>&1
+. .kiex/elixirs/elixir-1.1.1.env >/dev/null 2>&1
 eval "$(jenv init -)"
+
+source /usr/local/aws/bin/aws_zsh_completer.sh
