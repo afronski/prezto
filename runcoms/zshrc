@@ -51,6 +51,9 @@ alias mirror="mplayer -vf mirror -v tv:// -tv device=/dev/video0:driver=v4l2"
 alias ghci="ghci-color"
 alias vim="e"
 
+alias work-on="sudo pomodoro start &"
+alias work-off="sudo pomodoro stop"
+
 record() {
     [[ "$#" != "1" ]] && echo "Pass a channel index" && return
     FILE=${2:-'outfile.mp3'}
