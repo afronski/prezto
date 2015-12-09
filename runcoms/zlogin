@@ -17,10 +17,10 @@
 [[ -s $HOME/.nvm/nvm.sh ]] && source "$HOME/.nvm/nvm.sh"
 [[ -s $HOME/.rvm/scripts/rvm ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s $HOME/.venvburrito/startup.sh ]] && source "$HOME/.venvburrito/startup.sh"
-[[ -s "/home/afronski/.dnx/dnvm/dnvm.sh" ]] && . "/home/afronski/.dnx/dnvm/dnvm.sh"
+[[ -s $HOME/.dnx/dnvm/dnvm.sh ]] && . "$HOME/.dnx/dnvm/dnvm.sh"
 
-. ./.kerl/erlangs/18.1/activate >/dev/null 2>&1
-. ./.kiex/elixirs/elixir-1.1.1.env >/dev/null 2>&1
+source "$HOME/.kerl/erlangs/18.1/activate"
+source "$HOME/.kiex/elixirs/elixir-1.1.1.env"
 eval "$(jenv init -)"
 
 source /usr/local/aws/bin/aws_zsh_completer.sh
