@@ -12,7 +12,7 @@ fi
 
 # Environment Variables.
 
-export PATH="/usr/local/aws/bin:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/home/afronski/.rvm/bin:/home/afronski/.user-scripts:/opt/gradle/gradle-2.0/bin:/usr/local/heroku/bin:/home/afronski/bin/:/home/afronski/.jenv/bin:/home/afronski/.rvm/bin:/usr/local/heroku/bin:/home/afronski/.vir:/home/afronski/.kiex/bin/:/home/afronski/Clones/elm/Elm-Platform/0.15.1/.cabal-sandbox/bin:/opt/cuda/bin"
+export PATH="/usr/local/aws/bin:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/home/afronski/.rvm/bin:/home/afronski/.user-scripts:/opt/gradle/gradle-2.0/bin:/usr/local/heroku/bin:/home/afronski/bin/:/home/afronski/.jenv/bin:/home/afronski/.rvm/bin:/usr/local/heroku/bin:/home/afronski/.vir:/home/afronski/.kiex/bin/:/home/afronski/Clones/elm/Elm-Platform/0.15.1/.cabal-sandbox/bin:/opt/cuda/bin:/opt/android-sdk/platform-tools/"
 
 export GRADLE_HOME="/opt/gradle/gradle-2.0"
 
