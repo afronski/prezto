@@ -54,6 +54,13 @@ alias vim="e"
 alias work-on="sudo pomodoro start &"
 alias work-off="sudo pomodoro stop"
 
+alias notes="cd ~/Hobby/Repositories/WhiteRookPL/private-notes"
+alias morning-pages="e ~/Hobby/Repositories/WhiteRookPL/private-notes/morning-pages.org"
+
+work-log() {
+    e "~/Hobby/Repositories/WhiteRookPL/private-notes/work/active/$2@$1/history.org"
+}
+
 record() {
     [[ "$#" != "1" ]] && echo "Pass a channel index" && return
     FILE=${2:-'outfile.mp3'}
