@@ -57,6 +57,9 @@ alias work-off="sudo pomodoro stop"
 alias notes="cd ~/Hobby/Repositories/WhiteRookPL/private-notes"
 alias morning-pages="e ~/Hobby/Repositories/WhiteRookPL/private-notes/morning-pages.org"
 
+alias tomorrow-planning="tgl organize 'Plan for Tomorrow'"
+alias weekly-planning="tgl organize 'Weekly Planning'"
+
 work-log() {
     e "~/Hobby/Repositories/WhiteRookPL/private-notes/work/active/$2@$1/history.org"
 }
