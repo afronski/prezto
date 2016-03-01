@@ -14,13 +14,13 @@
   fi
 } &!
 
-[[ -s $HOME/.nvm/nvm.sh ]] && source "$HOME/.nvm/nvm.sh"
-[[ -s $HOME/.rvm/scripts/rvm ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -s $HOME/.venvburrito/startup.sh ]] && source "$HOME/.venvburrito/startup.sh"
-[[ -s $HOME/.dnx/dnvm/dnvm.sh ]] && . "$HOME/.dnx/dnvm/dnvm.sh"
-
 source "$HOME/.kerl/erlangs/18.2.1/activate"
 source "$HOME/.kiex/elixirs/elixir-1.1.1.env"
 eval "$(jenv init -)"
 
 source /usr/local/aws/bin/aws_zsh_completer.sh
+
+[[ -s $HOME/.nvm/nvm.sh ]] && source "$HOME/.nvm/nvm.sh"
+[[ -s $HOME/.venvburrito/startup.sh ]] && source "$HOME/.venvburrito/startup.sh"
+[[ -s $HOME/.dnx/dnvm/dnvm.sh ]] && . "$HOME/.dnx/dnvm/dnvm.sh"
+[[ -s $HOME/.rvm/scripts/rvm ]] && source "$HOME/.rvm/scripts/rvm"
