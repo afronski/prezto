@@ -23,6 +23,6 @@ eval "$(jenv init -)"
 [[ -s $HOME/.dnx/dnvm/dnvm.sh ]] && . "$HOME/.dnx/dnvm/dnvm.sh"
 
 source "$HOME/.evm/scripts/evm"
-source "$HOME/.kiex/elixirs/elixir-1.1.1.env"
+source "$HOME/.kiex/elixirs/elixir-1.2.3.env"
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source "$HOME/.rvm/scripts/rvm"
