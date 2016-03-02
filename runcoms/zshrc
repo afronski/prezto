@@ -55,6 +55,7 @@ alias work-on="sudo pomodoro start &"
 alias work-off="sudo pomodoro stop"
 
 alias notes="cd ~/Hobby/Repositories/WhiteRookPL/private-notes"
+alias work="cd ~/Work/Appliscale/AOL"
 alias morning-pages="e ~/Hobby/Repositories/WhiteRookPL/private-notes/morning-pages.org"
 
 alias tomorrow-planning="tgl organize 'Plan for Tomorrow'"
