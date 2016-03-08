@@ -14,12 +14,9 @@
   fi
 } &!
 
-source /usr/local/aws/bin/aws_zsh_completer.sh
-
 eval "$(jenv init -)"
 
 [[ -s $HOME/.nvm/nvm.sh ]] && source "$HOME/.nvm/nvm.sh"
-[[ -s $HOME/.venvburrito/startup.sh ]] && source "$HOME/.venvburrito/startup.sh"
 [[ -s $HOME/.dnx/dnvm/dnvm.sh ]] && . "$HOME/.dnx/dnvm/dnvm.sh"
 
 source "$HOME/.evm/scripts/evm"
