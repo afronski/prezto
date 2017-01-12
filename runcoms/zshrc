@@ -30,7 +30,7 @@ unset GREP_OPTIONS
 # Aliases.
 
 alias ls="ls --color=auto"
-alias ll="ls -lah"
+alias ll="ls -Llah"
 
 alias grep="grep --color=auto"
 
