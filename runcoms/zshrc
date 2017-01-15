@@ -22,10 +22,15 @@ export VISUAL=$EDITOR
 
 export TERM="rxvt-256color"
 
+export AURDEST="/home/afronski/Work/.tools/.pacaur"
+export NVM_DIR="/home/afronski/Work/.tools/.nvm"
+
 export AWS_DEFAULT_PROFILE="work"
 
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
+
+source "/home/afronski/.zprivate"
 
 # Aliases.
 

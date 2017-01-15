@@ -16,7 +16,7 @@
 
 eval "$(jenv init -)"
 
-[[ -s $HOME/.nvm/nvm.sh ]] && source "$HOME/.nvm/nvm.sh"
+[[ -s $HOME/Work/.tools/.nvm/nvm.sh ]] && source "$HOME/Work/.tools/.nvm/nvm.sh"
 [[ -s $HOME/.dnx/dnvm/dnvm.sh ]] && . "$HOME/.dnx/dnvm/dnvm.sh"
 
 source "$HOME/.kerl/installations/18.3/activate"
