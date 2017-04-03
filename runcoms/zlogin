@@ -13,13 +13,3 @@
     zcompile "$zcompdump"
   fi
 } &!
-
-eval "$(jenv init -)"
-
-[[ -s $HOME/Work/.tools/.nvm/nvm.sh ]] && source "$HOME/Work/.tools/.nvm/nvm.sh"
-[[ -s $HOME/.dnx/dnvm/dnvm.sh ]] && . "$HOME/.dnx/dnvm/dnvm.sh"
-
-source "$HOME/.kerl/installations/18.3/activate"
-source "$HOME/.kiex/elixirs/elixir-1.2.3.env"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
