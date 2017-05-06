@@ -10,6 +10,12 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Starting gnome-keyring.
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
 # Environment Variables.
 
 export PATH="${PATH}:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/home/afronski/.user-scripts:/opt/gradle/gradle-2.0/bin:/home/afronski/.jenv/bin:/usr/local/heroku/bin:/home/afronski/.kiex/bin/:/opt/cuda/bin:/opt/android-sdk/platform-tools/:/home/afronski/.xmonad/bin"
