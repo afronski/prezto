@@ -10,6 +10,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Setting up sqlite3 history for ZSH.
+
+source "${HOME}/.zsh-histdb/sqlite-history.zsh"
+source "${HOME}/.zsh-histdb/history-timer.zsh"
+
+autoload -Uz add-zsh-hook
+add-zsh-hook preexec _start_timer
+add-zsh-hook precmd  _stop_timer
+
 # Starting gnome-keyring.
 if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
@@ -18,7 +27,7 @@ fi
 
 # Environment Variables.
 
-export PATH="${PATH}:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/home/afronski/.user-scripts:/opt/gradle/gradle-2.0/bin:/home/afronski/.jenv/bin:/usr/local/heroku/bin:/home/afronski/.kiex/bin/:/opt/cuda/bin:/opt/android-sdk/platform-tools/:/home/afronski/.xmonad/bin"
+export PATH="${PATH}:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/home/afronski/.user-scripts:/home/afronski/.private:/opt/gradle/gradle-2.0/bin:/home/afronski/.jenv/bin:/usr/local/heroku/bin:/home/afronski/.kiex/bin/:/opt/cuda/bin:/opt/android-sdk/platform-tools/:/home/afronski/.xmonad/bin"
 
 export EDITOR="/home/afronski/.user-scripts/e"
 export GIT_EDITOR=$EDITOR
