@@ -19,6 +19,10 @@ autoload -Uz add-zsh-hook
 add-zsh-hook preexec _start_timer
 add-zsh-hook precmd  _stop_timer
 
+# Launching DBus.
+
+export $(dbus-launch)
+
 # Starting gnome-keyring.
 if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
