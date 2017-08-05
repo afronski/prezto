@@ -31,7 +31,7 @@ fi
 
 # Environment Variables.
 
-export PATH="${PATH}:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/home/afronski/.user-scripts:/home/afronski/.private:/opt/gradle/gradle-2.0/bin:/home/afronski/.jenv/bin:/usr/local/heroku/bin:/home/afronski/.kiex/bin/:/opt/cuda/bin:/opt/android-sdk/platform-tools/:/home/afronski/.xmonad/bin"
+export PATH="${PATH}:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/home/afronski/.user-scripts:/home/afronski/.private:/opt/gradle/gradle-2.0/bin:/home/afronski/.jenv/bin:/usr/local/heroku/bin:/home/afronski/.kiex/bin/:/opt/cuda/bin:/opt/android-sdk/platform-tools/:/home/afronski/.xmonad/bin:/home/afronski/.local/bin"
 
 export EDITOR="/home/afronski/.user-scripts/e"
 export GIT_EDITOR=$EDITOR
