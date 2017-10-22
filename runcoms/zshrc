@@ -34,6 +34,8 @@ export VISUAL=$EDITOR
 
 export AWS_DEFAULT_PROFILE="work"
 
+export NODEJS_CHECK_SIGNATURES="no"
+
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
