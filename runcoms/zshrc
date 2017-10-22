@@ -19,25 +19,13 @@ autoload -Uz add-zsh-hook
 add-zsh-hook preexec _start_timer
 add-zsh-hook precmd  _stop_timer
 
-# Launching DBus.
-
-export $(dbus-launch)
-
-# Starting gnome-keyring.
-if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
-fi
-
 # Environment Variables.
 
-export PATH="${PATH}:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/afronski/.cabal/bin:/home/afronski/.xmonad/bin:/home/afronski/.user-scripts:/home/afronski/.private:/opt/gradle/gradle-2.0/bin:/home/afronski/.jenv/bin:/usr/local/heroku/bin:/home/afronski/.kiex/bin/:/opt/cuda/bin:/opt/android-sdk/platform-tools/:/home/afronski/.xmonad/bin:/home/afronski/.local/bin"
+export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/afronski/.local/bin"
 
 export EDITOR="/home/afronski/.user-scripts/e"
 export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR
-
-export TERM="rxvt-256color"
 
 export AWS_DEFAULT_PROFILE="work"
 
@@ -53,64 +41,11 @@ alias ll="ls -Llah"
 
 alias grep="grep --color=auto"
 
-alias feh="feh --scale-down"
-
-alias printer-on="sudo systemctl start org.cups.cupsd.service"
-alias printer-off="sudo systemctl stop org.cups.cupsd.service"
-
-alias alsa-save="sudo alsactl -f /var/lib/alsa/asound.state store"
-alias cats='highlight -O ansi'
-
-alias mouse-on="ltunify pair"
-alias mouse-off="ltunify unpair mouse"
-
 alias vagrant="/usr/bin/vagrant"
 alias bvagrant="bundle exec vagrant"
 
-alias mirror="mplayer -vf mirror -v tv:// -tv device=/dev/video0:driver=v4l2"
-
 alias ghci="ghci-color"
 alias vim="e"
-
-alias work-on="sudo pomodoro start &"
-alias work-off="sudo pomodoro stop"
-
-alias tomorrow-planning="tgl organize 'Plan for Tomorrow'"
-alias weekly-planning="tgl organize 'Weekly Planning'"
-
-record() {
-    [[ "$#" != "1" ]] && echo "Pass a channel index" && return
-    FILE=${2:-'outfile.mp3'}
-    parec --monitor-stream $1 --format s16le --channels 2 --rate 44100 | lame -r -s 44.1 -b 16 --signed --little-endian --preset medium /dev/stdin $FILE
-}
-
-gh-repo-create() {
-    [[ "$#" != "1" ]] && echo "Pass a repository name" && return
-    token=`git config github.token`
-    curl -u "$token:x-oauth-basic" https://api.github.com/user/repos -d "{ \"name\": \"$1\" }"
-}
-
-initialize-repository() {
-    [[ "$#" != "1" ]] && echo "Pass a repository name" && return
-
-    mkdir $1
-    pushd $1
-      touch README.md
-      cp "../License - MIT.md" .
-      git init
-      git add . -v
-      git commit -m "Initial commit (only README and LICENSE)."
-      git remote add origin git@github.com:afronski/$1.git
-      git push -u origin master
-    popd
-}
-
-alias chrome-v8-perf="google-chrome-unstable --no-sandbox --js-flags='--trace-hydrogen           \
-                                                                      --trace-phase=Z            \
-                                                                      --trace-deopt              \
-                                                                      --code-comments            \
-                                                                      --hydrogen-track-positions \
-                                                                      --redirect-code-traces'"
 
 . ${HOME}/.asdf/asdf.sh
 . ${HOME}/.asdf/completions/asdf.bash
