@@ -52,5 +52,8 @@ alias bvagrant="bundle exec vagrant"
 alias ghci="ghci-color"
 alias vim="e"
 
+alias pbcopy='xclip -i'
+alias pbpaste='xclip -o'
+
 . ${HOME}/.asdf/asdf.sh
 . ${HOME}/.asdf/completions/asdf.bash
