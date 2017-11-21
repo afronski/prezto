@@ -58,3 +58,10 @@ alias pbpaste='xclip -o'
 
 . ${HOME}/.asdf/asdf.sh
 . ${HOME}/.asdf/completions/asdf.bash
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/afronski/.asdf/installs/nodejs/6.11.4/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.11.4/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/afronski/.asdf/installs/nodejs/6.11.4/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.11.4/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
