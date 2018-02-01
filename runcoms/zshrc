@@ -24,8 +24,6 @@ add-zsh-hook precmd  histdb-update-outcome
 
 # Environment Variables.
 
-export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/afronski/.local/bin"
-
 export EDITOR="/home/afronski/.user-scripts/e"
 export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR
@@ -59,9 +57,9 @@ alias pbpaste='xclip -o'
 . ${HOME}/.asdf/asdf.sh
 . ${HOME}/.asdf/completions/asdf.bash
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/afronski/.asdf/installs/nodejs/6.11.4/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.11.4/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/afronski/.asdf/installs/nodejs/6.11.4/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.11.4/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+NODEJS="`asdf current nodejs | awk '{print $1}'`"
+
+export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/afronski/.local/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/bin"
+
+[[ -f /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+[[ -f /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
