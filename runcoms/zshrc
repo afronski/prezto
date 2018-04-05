@@ -71,3 +71,11 @@ export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/afronski/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/home/afronski/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/afronski/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/afronski/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
