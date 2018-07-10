@@ -59,7 +59,7 @@ alias pbpaste='xclip -o'
 
 NODEJS="`asdf current nodejs | awk '{print $1}'`"
 
-export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/afronski/.local/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/bin"
+export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/afronski/.local/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/bin:/home/afronski/.Nozbe/"
 
 [[ -f /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 [[ -f /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
