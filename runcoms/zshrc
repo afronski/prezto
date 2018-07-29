@@ -28,7 +28,7 @@ export EDITOR="/home/afronski/.user-scripts/e"
 export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
-export AWS_DEFAULT_PROFILE="work"
+export AWS_DEFAULT_PROFILE="white-rook"
 
 export NODEJS_CHECK_SIGNATURES="no"
 export GOPATH="/home/afronski/Repositories/golang"
@@ -79,3 +79,5 @@ if [ -f '/home/afronski/.google-cloud-sdk/path.zsh.inc' ]; then source '/home/af
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/afronski/.google-cloud-sdk/completion.zsh.inc' ]; then source '/home/afronski/.google-cloud-sdk/completion.zsh.inc'; fi
+
+export _JAVA_AWT_WM_NONREPARENTING=1
