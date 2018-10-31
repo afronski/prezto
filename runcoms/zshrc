@@ -75,3 +75,5 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 setxkbmap -option "nbsp:none"
+
+function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
