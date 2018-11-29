@@ -66,10 +66,12 @@ export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PATH="$PATH:/opt/yarn-/bin"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
