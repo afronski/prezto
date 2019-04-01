@@ -79,3 +79,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 setxkbmap -option "nbsp:none"
 
 function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/afronski/work/repositories/github/patternmatch/button-for-slack/node_modules/tabtab/.completions/slss.zsh ]] && . /home/afronski/work/repositories/github/patternmatch/button-for-slack/node_modules/tabtab/.completions/slss.zsh
