@@ -83,3 +83,5 @@ function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /home/afronski/work/repositories/github/patternmatch/button-for-slack/node_modules/tabtab/.completions/slss.zsh ]] && . /home/afronski/work/repositories/github/patternmatch/button-for-slack/node_modules/tabtab/.completions/slss.zsh
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
