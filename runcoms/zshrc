@@ -5,6 +5,13 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -85,3 +92,7 @@ function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
 [[ -f /home/afronski/work/repositories/github/patternmatch/button-for-slack/node_modules/tabtab/.completions/slss.zsh ]] && . /home/afronski/work/repositories/github/patternmatch/button-for-slack/node_modules/tabtab/.completions/slss.zsh
 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

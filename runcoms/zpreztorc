@@ -17,4 +17,4 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt'
 zstyle ':prezto:module:editor' key-bindings 'emacs'
-zstyle ':prezto:module:prompt' theme 'cloud'
+zstyle ':prezto:module:prompt' theme 'powerlevel10k'
