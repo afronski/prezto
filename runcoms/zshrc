@@ -34,8 +34,6 @@ export EDITOR="/home/afronski/.user-scripts/e"
 export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
-export AWS_DEFAULT_PROFILE="white-rook"
-
 export NODEJS_CHECK_SIGNATURES="no"
 export GOPATH="/home/afronski/work/golang"
 
@@ -61,21 +59,13 @@ alias pbcopy='xclip -i'
 alias pbpaste='xclip -o'
 
 . ${HOME}/.asdf/asdf.sh
-. ${HOME}/.asdf/completions/asdf.bash
 
 NODEJS="`asdf current nodejs | awk '{print $1}'`"
 
 export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/afronski/.local/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/bin:/home/afronski/.Nozbe/:/opt/chefdk/embedded/bin"
 
-[[ -f /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-[[ -f /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 export PATH="$PATH:/opt/yarn-/bin"
@@ -83,13 +73,10 @@ export PATH="$PATH:/opt/yarn-/bin"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+
 setxkbmap -option "nbsp:none"
 
 function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
-
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /home/afronski/work/repositories/github/patternmatch/button-for-slack/node_modules/tabtab/.completions/slss.zsh ]] && . /home/afronski/work/repositories/github/patternmatch/button-for-slack/node_modules/tabtab/.completions/slss.zsh
 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
