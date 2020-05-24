@@ -82,3 +82,6 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="/home/afronski/.ebcli-virtual-env/executables:${PATH}"
+export PATH="${PATH}:/opt/gradle/gradle-6.4.1/bin"
