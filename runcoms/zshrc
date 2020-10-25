@@ -83,3 +83,13 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 export PATH="/home/afronski/.ebcli-virtual-env/executables:${PATH}"
 export PATH="${PATH}:/opt/gradle/gradle-6.4.1/bin"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/slss.zsh ]] && . /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/slss.zsh
