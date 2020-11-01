@@ -21,6 +21,10 @@ if [ -f `which powerline-daemon` ]; then
   powerline-daemon -q
 fi
 
+function pretty_csv {
+  column -t -s, -n "$@" | less -F -S -X -K
+}
+
 # Setting up sqlite3 history for ZSH.
 
 source "${HOME}/.zsh-histdb/sqlite-history.zsh"
