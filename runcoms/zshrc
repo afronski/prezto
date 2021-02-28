@@ -70,11 +70,7 @@ alias pbpaste='xclip -o'
 
 NODEJS="`asdf current nodejs | awk '{print $1}'`"
 
-export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/afronski/.local/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/bin:/home/afronski/.Nozbe/:/opt/chefdk/embedded/bin"
-
-[[ -f /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-
-[[ -f /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/.asdf/installs/nodejs/6.10.3/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+export PATH="${PATH}:/home/afronski/.user-scripts:/home/afronski/.private:/home/afronski/.local/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/bin:/home/afronski/.asdf/installs/nodejs/${NODEJS}/.npm/bin:/opt/chefdk/embedded/bin"
 
 export PATH="$PATH:/opt/yarn-/bin"
 
@@ -91,13 +87,3 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 export PATH="/home/afronski/.ebcli-virtual-env/executables:${PATH}"
 export PATH="${PATH}:/opt/gradle/gradle-6.4.1/bin"
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/sls.zsh ]] && . /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/slss.zsh ]] && . /home/afronski/work/repositories/bitbucket/pattern-match/from-zero-to-aws-serverless-hero-cdk/aws-text-reader/day-2/step-0-with-no-changes/backend/node_modules/tabtab/.completions/slss.zsh
